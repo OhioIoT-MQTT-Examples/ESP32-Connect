@@ -4,11 +4,9 @@ WiFi_Tools::WiFi_Tools() {}
 
 WiFi_Tools wifi_tools;
 
-
 void WiFi_Tools::enable_logging() {
 	_echo = true;
 }
-
 
 void WiFi_Tools::begin(const char * ssid, const char * pass) {
 	WiFi.setAutoReconnect(false);
@@ -17,7 +15,6 @@ void WiFi_Tools::begin(const char * ssid, const char * pass) {
 	WiFi.begin(ssid, pass);
 	if (_echo) Serial.println("\n\twifi connecting...");
 }
-
 
 void WiFi_Tools::reconnect() {
 	if ((millis() - _reconnect_timer > RECONNECT_INTERVAL) && _should_reconnect) {

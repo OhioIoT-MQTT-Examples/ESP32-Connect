@@ -13,7 +13,6 @@ class Mqtt {
 		Mqtt();
 
 		void enable_logging();
-		
 		void setup(const char *, int);
 		void maintain();
 
@@ -31,6 +30,5 @@ class Mqtt {
 		bool _echo = false;
 
 };
-
 
 extern Mqtt mqtt;

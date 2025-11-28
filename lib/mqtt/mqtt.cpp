@@ -1,5 +1,6 @@
 #include "mqtt.h"
 
+#define CLIENT_ID "test_device"
 
 Mqtt::Mqtt() {}
 
@@ -9,6 +10,7 @@ Mqtt mqtt;
 void Mqtt::enable_logging() {
 	_echo = true;
 }
+
 
 void Mqtt::setup(const char * mqtt_host, int mqtt_port) {
 	_mqtt_client.setClient(_wifi_client);
@@ -59,7 +61,7 @@ void Mqtt::_log_state() {
 	if (conn_state == -3) Serial.println("MQTT_CONNECTION_LOST");        
 	if (conn_state == -2) Serial.println("MQTT_CONNECT_FAILED");         
 	if (conn_state == -1) Serial.println("MQTT_DISCONNECTED");           
-	if (conn_state == 0)  Serial.println("MQTT_CONNECTED");              
+	// if (conn_state == 0)  Serial.println("MQTT_CONNECTED");              
 	if (conn_state == 1)  Serial.println("MQTT_CONNECT_BAD_PROTOCOL");   
 	if (conn_state == 2)  Serial.println("MQTT_CONNECT_BAD_CLIENT_ID");  
 	if (conn_state == 3)  Serial.println("MQTT_CONNECT_UNAVAILABLE");    
