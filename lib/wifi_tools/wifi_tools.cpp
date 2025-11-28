@@ -24,7 +24,6 @@ void WiFi_Tools::reconnect() {
 	}
 }
 
-
 void WiFi_Tools::_event_handler(WiFiEvent_t event, WiFiEventInfo_t info) {
 	if (event == ARDUINO_EVENT_WIFI_STA_DISCONNECTED) {
 		if (wifi_tools.is_connected && wifi_tools._echo) Serial.println("\twifi disconnected...\n");

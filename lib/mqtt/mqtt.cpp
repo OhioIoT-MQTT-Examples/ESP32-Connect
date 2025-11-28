@@ -19,17 +19,11 @@ void Mqtt::setup(const char * mqtt_host, int mqtt_port) {
 
 
 void Mqtt::maintain() {
-
 	if (!_mqtt_client.connected() || !is_connected) {
-
 		bool should_reconnect = _is_first || millis() - _retry_timer > RETRY_INTERVAL;
-
 		if (should_reconnect) {
-
 			_is_first = false;
-			
 			if (_echo) Serial.println("\tmqtt connecting...");
-			
 			if (_mqtt_client.connect(CLIENT_ID)) {
 				if (_echo) Serial.println("\tmqtt connected...");
 				_is_first = true;
@@ -38,25 +32,17 @@ void Mqtt::maintain() {
 				if (_echo) _log_state();
 				is_connected = false;
 			}
-
 			_retry_timer = millis();
 		}
-
 	} else {
-
 		_mqtt_client.loop();
-
 	}
-
 }
 
 
 void Mqtt::_log_state() {
-
 	int conn_state = _mqtt_client.state();
-
 	Serial.print("\tfailed to connect -- conn state: ");
-
 	if (conn_state == -4) Serial.println("MQTT_CONNECTION_TIMEOUT");     
 	if (conn_state == -3) Serial.println("MQTT_CONNECTION_LOST");        
 	if (conn_state == -2) Serial.println("MQTT_CONNECT_FAILED");         
@@ -67,5 +53,4 @@ void Mqtt::_log_state() {
 	if (conn_state == 3)  Serial.println("MQTT_CONNECT_UNAVAILABLE");    
 	if (conn_state == 4)  Serial.println("MQTT_CONNECT_BAD_CREDENTIALS");
 	if (conn_state == 5)  Serial.println("MQTT_CONNECT_UNAUTHORIZED");   
-
 }
