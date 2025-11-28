@@ -15,12 +15,6 @@ This is the beginning of a library for you to connect your ESP32 to your new MQT
 
 ### PlatformIO
 - Copy ***lib/credentials/credentials_template*** to ***lib/credentials/credentials.h***, and fill in your credential details:
-```
-#define WIFI_SSID "XXXX"
-#define WIFI_PASS "XXXX"
-#define MQTT_HOST "XXX.XXX.X.X"
-#define MQTT_PORT XXXX
-```
 - Compile and upload your code
 
 
