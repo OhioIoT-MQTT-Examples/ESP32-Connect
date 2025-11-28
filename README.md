@@ -14,7 +14,7 @@ This is the beginning of a library for you to connect your ESP32 to your new MQT
 
 
 ### PlatformIO
-- Copy ***lib/credentials/credentials_template*** to ***lib/credentials/credentials.h***, and fill in your credential details:
+- Copy ***lib/credentials/credentials_template*** to ***lib/credentials/credentials.h***, and edit the credentials:
 - Compile and upload your code
 
 
