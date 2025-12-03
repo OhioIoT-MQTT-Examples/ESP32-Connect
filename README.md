@@ -13,14 +13,15 @@ This is the beginning of a library for you to connect your ESP32 to your new MQT
 
 
 ### PlatformIO
-- Copy ***lib/credentials/credentials_template*** to ***lib/credentials/credentials.h***, and edit the credentials:
+- Copy ***lib/credentials/credentials_template*** to ***lib/credentials/credentials.h***, and edit the credentials
 - Compile and upload your code
 
 
 ### Arduino IDE
 #### Option 1 ####
 - Copy all folders in ***lib/*** to your Arduino ***libraries/*** folder
-- Edit the credential in ***credentials/cre
+- Copy ***credentials/credentials_template*** to ***credentials/credentials.h***, and edit the credentials
+- Create a project folder, and copy ***src/main.cpp*** into that folder with a name that matches, ending in *.ino
 
 
 ## About
