@@ -22,6 +22,7 @@ This is the beginning of a library for you to connect your ESP32 to your new MQT
 - Copy all folders in ***lib/*** to your Arduino ***libraries/*** folder
 - Copy ***credentials/credentials_template*** to ***credentials/credentials.h***, and edit the credentials
 - Create a project folder, and copy ***src/main.cpp*** into that folder with a name that matches, ending in *.ino
+- Download PubSubClient.h using the Arduino IDE Library Manager
 #### Option 2 ####
 - Copy all of the files from the subfolders inside ***lib/*** into the same project folder created above, and keep all of the files, including the *.ino, together
 
