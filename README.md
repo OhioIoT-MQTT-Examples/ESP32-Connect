@@ -18,9 +18,9 @@ This is the beginning of a library for you to connect your ESP32 to your new MQT
 
 
 ### Arduino IDE
-- Edit the credentials in ***for_arduino/connect/credentials.h***
-- Open ***for_arduino/connect/connect.ino*** in Arduino IDE
-- Compile and upload your code
+#### Option 1 ####
+- Copy all folders in ***lib/*** to your Arduino ***libraries/*** folder
+- Edit the credential in ***credentials/cre
 
 
 ## About
